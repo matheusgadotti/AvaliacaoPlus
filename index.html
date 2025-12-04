@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliação Plus</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+  <style>
+    body { font-family: Arial; max-width: 750px; margin: auto; padding: 20px; }
+    .campo { margin-bottom: 20px; }
+    .pergunta { font-weight: bold; margin-bottom: 5px; }
+    button {
+      padding: 12px 20px;
+      background: #9d4bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+    button:hover { background: #7e2cff; }
+  </style>
+</head>
+<body>
+
+  <h1>Avaliação - Plus</h1>
+
+  <form id="formAvaliacao">
+
+    <!-- Nome -->
+    <div class="campo">
+      <label><b>Estrutura:</b></label><br>
+      <input type="text" id="nome" required style="width: 100%; padding: 8px;">
+    </div>
+
+    <!-- NOTA -->
+    <div class="campo">
+      <label><b>Nota geral (0 a 100):</b></label><br>
+      <input type="number" id="nota" min="0" max="10" required style="width: 100%; padding: 8px;">
+    </div>
+
+    <!-- PERGUNTA 1 -->
+    <div class="campo">
+      <div class="pergunta">1. Como criar uma lead no Funil?</div>
+      <label><input type="radio" name="p1" value="Conseguiu Realizar" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p1" value="Realizou Parcialmente"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p1" value="Não Realizou"> Não Realizou</label>
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="campo">
+      <div class="pergunta">2. Como você considera o tempo de resposta?</div>
+      <label><input type="radio" name="p2" value="Muito rápido" required> Muito rápido</label><br>
+      <label><input type="radio" name="p2" value="Adequado"> Adequado</label><br>
+      <label><input type="radio" name="p2" value="Lento"> Lento</label>
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="campo">
+      <div class="pergunta">3. O serviço atendeu às suas expectativas?</div>
+      <label><input type="radio" name="p3" value="Superou" required> Superou</label><br>
+      <label><input type="radio" name="p3" value="Atendeu"> Atendeu</label><br>
+      <label><input type="radio" name="p3" value="Não atendeu"> Não atendeu</label>
+    </div>
+
+    <!-- PERGUNTA 4 -->
+    <div class="campo">
+      <div class="pergunta">4. Você recomendaria nosso serviço?</div>
+      <label><input type="radio" name="p4" value="Sim, com certeza" required> Sim, com certeza</label><br>
+      <label><input type="radio" name="p4" value="Talvez"> Talvez</label><br>
+      <label><input type="radio" name="p4" value="Não"> Não</label>
+    </div>
+
+    <!-- PERGUNTA 5 -->
+    <div class="campo">
+      <div class="pergunta">5. Como você avalia o custo-benefício?</div>
+      <label><input type="radio" name="p5" value="Ótimo" required> Ótimo</label><br>
+      <label><input type="radio" name="p5" value="Bom"> Bom</label><br>
+      <label><input type="radio" name="p5" value="Ruim"> Ruim</label>
+    </div>
+
+        <!-- PERGUNTA 6 -->
+    <div class="campo">
+      <div class="pergunta">1. Como criar uma lead no Funil?</div>
+      <label><input type="radio" name="p6" value="Conseguiu Realizar" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p6" value="Realizou Parcialmente"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p6" value="Não Realizou"> Não Realizou</label>
+    </div>
+
+    <!-- PERGUNTA 7 -->
+    <div class="campo">
+      <div class="pergunta">2. Como você considera o tempo de resposta?</div>
+      <label><input type="radio" name="p7" value="Muito rápido" required> Muito rápido</label><br>
+      <label><input type="radio" name="p7" value="Adequado"> Adequado</label><br>
+      <label><input type="radio" name="p7" value="Lento"> Lento</label>
+    </div>
+
+    <!-- PERGUNTA 8 -->
+    <div class="campo">
+      <div class="pergunta">3. O serviço atendeu às suas expectativas?</div>
+      <label><input type="radio" name="p8" value="Superou" required> Superou</label><br>
+      <label><input type="radio" name="p8" value="Atendeu"> Atendeu</label><br>
+      <label><input type="radio" name="p8" value="Não atendeu"> Não atendeu</label>
+    </div>
+
+    <!-- PERGUNTA 9 -->
+    <div class="campo">
+      <div class="pergunta">4. Você recomendaria nosso serviço?</div>
+      <label><input type="radio" name="p9" value="Sim, com certeza" required> Sim, com certeza</label><br>
+      <label><input type="radio" name="p9" value="Talvez"> Talvez</label><br>
+      <label><input type="radio" name="p9" value="Não"> Não</label>
+    </div>
+
+    <!-- PERGUNTA 10 -->
+    <div class="campo">
+      <div class="pergunta">5. Como você avalia o custo-benefício?</div>
+      <label><input type="radio" name="p10" value="Ótimo" required> Ótimo</label><br>
+      <label><input type="radio" name="p10" value="Bom"> Bom</label><br>
+      <label><input type="radio" name="p10" value="Ruim"> Ruim</label>
+    </div>
+
+    <!-- Comentário opcional -->
+    <div class="campo">
+      <label><b>Comentário adicional:</b></label>
+      <textarea id="comentario" rows="4" style="width: 100%; padding: 8px;"></textarea>
+    </div>
+
+    <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+  </form>
+
+
+  <!-- SCRIPT DO PDF -->
+  <script>
+    async function gerarPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const nome = document.getElementById("nome").value;
+      const nota = document.getElementById("nota").value;
+      const comentario = document.getElementById("comentario").value || "Nenhum comentário";
+
+      // Coleta das respostas
+      const respostas = {
+        "1 - Criar lead no Funil": document.querySelector('input[name="p1"]:checked').value,
+        "2 - ": document.querySelector('input[name="p2"]:checked').value,
+        "3 - ": document.querySelector('input[name="p3"]:checked').value,
+        "4 - ": document.querySelector('input[name="p4"]:checked').value,
+        "5 - ": document.querySelector('input[name="p5"]:checked').value,
+        "6 - ": document.querySelector('input[name="p6"]:checked').value,
+        "7 - ": document.querySelector('input[name="p7"]:checked').value,
+        "8 - ": document.querySelector('input[name="p8"]:checked').value,
+        "9 - ": document.querySelector('input[name="p9"]:checked').value,
+        "10 - ": document.querySelector('input[name="p10"]:checked').value,
+      };
+
+      // ================================
+      // SUA LOGO EM BASE64 → COLE AQUI
+      // ================================
+      const logoBase64 = "DATA_BASE64_AQUI";
+
+      // CABEÇALHO
+      if (logoBase64.length > 50) {
+        doc.addImage(logoBase64, "PNG", 15, 10, 30, 30);
+      }
+
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(22);
+      doc.setTextColor(157, 75, 255);
+      doc.text("Avaliação - Plus", 105, 22, { align: "center" });
+
+      doc.setDrawColor(157, 75, 255);
+      doc.setLineWidth(1.5);
+      doc.line(15, 40, 195, 40);
+
+      // Dados iniciais
+      doc.setFontSize(12);
+      doc.setTextColor(0, 0, 0);
+      doc.text(`Estrutura: ${nome}`, 15, 50);
+      doc.text(`Data Avaliação: ${new Date().toLocaleDateString("pt-BR")}`, 15, 58);
+
+      // TABELA DAS PERGUNTAS
+      const body = Object.entries(respostas).map(([pergunta, resposta]) => [pergunta, resposta]);
+
+      doc.autoTable({
+        startY: 75,
+        head: [["Nota Final", nota]],
+        body: body,
+        headStyles: {
+          fillColor: [157, 75, 255],
+          textColor: 255,
+          fontSize: 13
+        },
+        alternateRowStyles: { fillColor: [245, 235, 255] },
+        margin: { left: 15, right: 15 }
+      });
+
+      // Comentário
+      doc.setFont("helvetica", "bold");
+      doc.text("Comentário adicional:", 15, doc.lastAutoTable.finalY + 15);
+
+      doc.setFont("helvetica", "normal");
+      const texto = doc.splitTextToSize(comentario, 180);
+      doc.text(texto, 15, doc.lastAutoTable.finalY + 25);
+
+      // RODAPÉ
+      const pageHeight = doc.internal.pageSize.height;
+      doc.setFontSize(10);
+      doc.setTextColor(120);
+      doc.text("Documento gerado automaticamente pelo sistema Plus.", 105, pageHeight - 15, { align: "center" });
+
+      doc.save(`avaliacao-plus-${nome}.pdf`);
+    }
+  </script>
+
+</body>
+</html>
