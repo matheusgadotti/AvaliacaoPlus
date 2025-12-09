@@ -13,14 +13,14 @@
     .pergunta { font-weight: bold; margin-bottom: 5px; }
     button {
       padding: 12px 20px;
-      background: #9d4bff;
+      background: #5913ca;
       color: white;
       border: none;
       cursor: pointer;
       font-size: 16px;
       border-radius: 8px;
     }
-    button:hover { background: #7e2cff; }
+    button:hover { background: #5913ca; }
   </style>
 </head>
 <body>
@@ -35,90 +35,86 @@
       <input type="text" id="nome" required style="width: 100%; padding: 8px;">
     </div>
 
-    <!-- NOTA -->
-    <div class="campo">
-      <label><b>Nota geral (0 a 100):</b></label><br>
-      <input type="number" id="nota" min="0" max="10" required style="width: 100%; padding: 8px;">
-    </div>
+
 
     <!-- PERGUNTA 1 -->
     <div class="campo">
       <div class="pergunta">1. Como criar uma lead no Funil?</div>
-      <label><input type="radio" name="p1" value="Conseguiu Realizar" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p1" value="Realizou Parcialmente"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p1" value="Não Realizou"> Não Realizou</label>
+      <label><input type="radio" name="p1" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p1" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p1" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 2 -->
     <div class="campo">
       <div class="pergunta">2. </div>
-      <label><input type="radio" name="p2" value="Muito rápido" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p2" value="Adequado"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p2" value="Lento"> Não Realizou</label>
+      <label><input type="radio" name="p2" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p2" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p2" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 3 -->
     <div class="campo">
       <div class="pergunta">3. </div>
-      <label><input type="radio" name="p3" value="Superou" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p3" value="Atendeu"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p3" value="Não atendeu"> Não Realizou</label>
+      <label><input type="radio" name="p3" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p3" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p3" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 4 -->
     <div class="campo">
       <div class="pergunta">4. </div>
-      <label><input type="radio" name="p4" value="Sim, com certeza" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p4" value="Talvez"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p4" value="Não"> Não Realizou</label>
+      <label><input type="radio" name="p4" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p4" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p4" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 5 -->
     <div class="campo">
       <div class="pergunta">5. </div>
-      <label><input type="radio" name="p5" value="Ótimo" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p5" value="Bom"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p5" value="Ruim"> Não Realizou</label>
+      <label><input type="radio" name="p5" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p5" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p5" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
         <!-- PERGUNTA 6 -->
     <div class="campo">
       <div class="pergunta">6. </div>
-      <label><input type="radio" name="p6" value="Conseguiu Realizar" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p6" value="Realizou Parcialmente"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p6" value="Não Realizou"> Não Realizou</label>
+      <label><input type="radio" name="p6" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p6" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p6" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 7 -->
     <div class="campo">
       <div class="pergunta">7. </div>
-      <label><input type="radio" name="p7" value="Muito rápido" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p7" value="Adequado"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p7" value="Lento"> Não Realizou</label>
+      <label><input type="radio" name="p7" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p7" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p7" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 8 -->
     <div class="campo">
       <div class="pergunta">8. </div>
-      <label><input type="radio" name="p8" value="Superou" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p8" value="Atendeu"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p8" value="Não atendeu"> Não Realizou</label>
+      <label><input type="radio" name="p8" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p8" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p8" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 9 -->
     <div class="campo">
       <div class="pergunta">9. </div>
-      <label><input type="radio" name="p9" value="Sim, com certeza" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p9" value="Talvez"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p9" value="Não"> Não Realizou</label>
+      <label><input type="radio" name="p9" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p9" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p9" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- PERGUNTA 10 -->
     <div class="campo">
       <div class="pergunta">10. </div>
-      <label><input type="radio" name="p10" value="Ótimo" required> Conseguiu Realizar</label><br>
-      <label><input type="radio" name="p10" value="Bom"> Realizou Parcialmente</label><br>
-      <label><input type="radio" name="p10" value="Ruim"> Não Realizou</label>
+      <label><input type="radio" name="p10" value="Conseguiu Realizar" data-score="10" required> Conseguiu Realizar</label><br>
+      <label><input type="radio" name="p10" value="Realizou Parcialmente" data-score="5"> Realizou Parcialmente</label><br>
+      <label><input type="radio" name="p10" value="Não Realizou" data-score="0"> Não Realizou</label>
     </div>
 
     <!-- Comentário opcional -->
@@ -137,8 +133,20 @@
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
 
+function calcularNotaFinal() {
+    let total = 0;
+    const selecionados = document.querySelectorAll('input[type="radio"]:checked');
+
+    selecionados.forEach(radio => {
+        const score = parseInt(radio.getAttribute("data-score"));
+        total += score;
+    });
+
+    return total;
+}
+
       const nome = document.getElementById("nome").value;
-      const nota = document.getElementById("nota").value;
+      const nota = calcularNotaFinal();
       const comentario = document.getElementById("comentario").value || "Nenhum comentário";
 
       // Coleta das respostas
@@ -179,6 +187,7 @@
       doc.setTextColor(0, 0, 0);
       doc.text(`Estrutura: ${nome}`, 15, 50);
       doc.text(`Data Avaliação: ${new Date().toLocaleDateString("pt-BR")}`, 15, 58);
+      doc.text(`Nota minima para aprovação: 70 `, 15, 66);
 
       // TABELA DAS PERGUNTAS
       const body = Object.entries(respostas).map(([pergunta, resposta]) => [pergunta, resposta]);
@@ -196,13 +205,21 @@
         margin: { left: 15, right: 15 }
       });
 
+
+      // Legenda
+      doc.setFont("helvetica", "normal");
+      doc.text("Conseguiu Realizar = 10 Pontos", 15, doc.lastAutoTable.finalY + 15);
+      doc.text("Realizou Parcialmente = 5 Pontos", 15, doc.lastAutoTable.finalY + 25);
+      doc.text("Não Realizou = 0 Pontos", 15, doc.lastAutoTable.finalY + 35);
+
+
       // Comentário
       doc.setFont("helvetica", "bold");
-      doc.text("Comentário adicional:", 15, doc.lastAutoTable.finalY + 15);
+      doc.text("Comentário adicional:", 15, doc.lastAutoTable.finalY + 55);
 
       doc.setFont("helvetica", "normal");
       const texto = doc.splitTextToSize(comentario, 180);
-      doc.text(texto, 15, doc.lastAutoTable.finalY + 25);
+      doc.text(texto, 15, doc.lastAutoTable.finalY + 65);
 
       // RODAPÉ
       const pageHeight = doc.internal.pageSize.height;
